@@ -2,12 +2,18 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import Breadcrumbs from '../components/Breadcrumbs';
+import Seo from '../components/Seo';
 import categories from '../data/categories.json';
 import tools from '../data/tools.json';
 
 export default function Categories() {
   return (
     <div className="pt-24 pb-20 page-enter">
+      <Seo
+        title="Categories"
+        description="Browse AI tools by category and find the best tools for your use case."
+        path="/categories"
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-8">
           <Breadcrumbs items={[{ label: 'Categories' }]} />

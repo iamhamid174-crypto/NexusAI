@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import BlogCard from '../components/BlogCard';
 import SearchBar from '../components/SearchBar';
 import Breadcrumbs from '../components/Breadcrumbs';
+import Seo from '../components/Seo';
 import blogs from '../data/blogs.json';
 
 const allCategories = ['All', ...new Set(blogs.map(b => b.category))];
@@ -29,6 +30,11 @@ export default function Blog() {
 
   return (
     <div className="pt-24 pb-20 page-enter">
+      <Seo
+        title="Blog"
+        description="AI tutorials, comparisons, and practical guides to help you choose and use the best AI tools."
+        path="/blog"
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-8">
           <Breadcrumbs items={[{ label: 'Blog' }]} />

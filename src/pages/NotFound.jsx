@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Home, Search, ArrowLeft } from 'lucide-react';
+import Seo from '../components/Seo';
 
 export default function NotFound() {
   return (
     <div className="min-h-screen flex items-center justify-center px-4 page-enter">
+      <Seo title="404" description="Page not found." path="/404" noindex />
       <div className="text-center max-w-lg">
         <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }}>
           <div className="text-8xl font-black gradient-text mb-4">404</div>

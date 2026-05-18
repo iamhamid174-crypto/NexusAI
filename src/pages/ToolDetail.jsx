@@ -4,6 +4,7 @@ import { Star, ExternalLink, Check, X, TrendingUp, ArrowRight, Tag } from 'lucid
 import Breadcrumbs from '../components/Breadcrumbs';
 import FAQAccordion from '../components/FAQAccordion';
 import ToolCard from '../components/ToolCard';
+import Seo from '../components/Seo';
 import tools from '../data/tools.json';
 
 const pricingColors = {
@@ -36,6 +37,11 @@ export default function ToolDetail() {
 
   return (
     <div className="pt-24 pb-20 page-enter">
+      <Seo
+        title={`${tool.name} — ${tool.category}`}
+        description={tool.longDescription || tool.description}
+        path={`/tools/${tool.slug}`}
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-6">
           <Breadcrumbs items={[

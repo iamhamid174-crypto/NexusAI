@@ -5,6 +5,7 @@ import { Clock, User, Calendar, ArrowLeft, Share2, Copy, Check } from 'lucide-re
 import Breadcrumbs from '../components/Breadcrumbs';
 import BlogCard from '../components/BlogCard';
 import { useReadingProgress } from '../hooks/useReadingProgress';
+import Seo from '../components/Seo';
 import blogs from '../data/blogs.json';
 
 const imageGradients = {
@@ -142,6 +143,11 @@ export default function BlogDetail() {
 
   return (
     <div className="pt-24 pb-20 page-enter">
+      <Seo
+        title={blog.title}
+        description={blog.excerpt}
+        path={`/blog/${blog.slug}`}
+      />
       <div className="reading-progress" style={{ width: `${progress}%` }} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-6">

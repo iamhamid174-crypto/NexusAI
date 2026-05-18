@@ -4,6 +4,7 @@ import { SlidersHorizontal, X, TrendingUp, Star } from 'lucide-react';
 import ToolCard from '../components/ToolCard';
 import SearchBar from '../components/SearchBar';
 import Breadcrumbs from '../components/Breadcrumbs';
+import Seo from '../components/Seo';
 import tools from '../data/tools.json';
 import categories from '../data/categories.json';
 
@@ -43,6 +44,11 @@ export default function Tools() {
 
   return (
     <div className="pt-24 pb-20 min-h-screen page-enter">
+      <Seo
+        title="All AI Tools"
+        description={`Browse ${tools.length}+ AI tools across writing, coding, image, video, marketing, productivity, and more.`}
+        path="/tools"
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-8">
           <Breadcrumbs items={[{ label: 'AI Tools' }]} />

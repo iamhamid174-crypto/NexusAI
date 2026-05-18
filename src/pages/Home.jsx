@@ -5,6 +5,7 @@ import ToolCard from '../components/ToolCard';
 import BlogCard from '../components/BlogCard';
 import NewsletterSection from '../components/NewsletterSection';
 import AnimatedNumber from '../components/AnimatedNumber';
+import Seo from '../components/Seo';
 import tools from '../data/tools.json';
 import blogs from '../data/blogs.json';
 import categories from '../data/categories.json';
@@ -35,6 +36,11 @@ export default function Home() {
 
   return (
     <div className="page-enter">
+      <Seo
+        title="AI Tools Directory"
+        description="Discover and compare the best AI tools for writing, coding, image generation, video, marketing, and productivity."
+        path="/"
+      />
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
         <div className="absolute inset-0 dot-pattern hero-mesh" />
