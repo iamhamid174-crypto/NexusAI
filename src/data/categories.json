@@ -1,0 +1,9 @@
+[
+  {"id":1,"name":"Writing AI","slug":"writing-ai","icon":"✍️","description":"AI tools for writing, editing, copywriting, and content creation","color":"#8b5cf6","count":5},
+  {"id":2,"name":"Coding AI","slug":"coding-ai","icon":"💻","description":"AI-powered development tools, code generation, and debugging","color":"#0ea5e9","count":4},
+  {"id":3,"name":"Image AI","slug":"image-ai","icon":"🖼️","description":"Generate, edit, and transform images with artificial intelligence","color":"#f59e0b","count":5},
+  {"id":4,"name":"Video AI","slug":"video-ai","icon":"🎬","description":"Create, edit, and enhance videos using powerful AI tools","color":"#ef4444","count":6},
+  {"id":5,"name":"Productivity AI","slug":"productivity-ai","icon":"⚡","description":"Boost your productivity with AI automation and workflow tools","color":"#10b981","count":7},
+  {"id":6,"name":"Marketing AI","slug":"marketing-ai","icon":"📈","description":"AI-powered marketing, SEO, and growth tools","color":"#f97316","count":3},
+  {"id":7,"name":"Chatbots","slug":"chatbots","icon":"🤖","description":"Conversational AI assistants and chatbot platforms","color":"#6366f1","count":4}
+]

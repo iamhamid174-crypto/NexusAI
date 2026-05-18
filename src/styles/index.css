@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    @apply bg-slate-50 text-slate-900 dark:bg-[#080c14] dark:text-slate-100;
+    font-family: 'Sora', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
+
+@layer components {
+  .glass { @apply bg-white/10 backdrop-blur-xl border border-white/20; }
+  .glass-card { @apply bg-white dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/50 rounded-2xl shadow-card backdrop-blur-sm; }
+  .btn-primary { @apply bg-gradient-to-r from-brand-500 to-accent-500 text-white font-semibold px-6 py-3 rounded-xl hover:shadow-glow transition-all duration-300 hover:scale-105 active:scale-95; }
+  .btn-secondary { @apply bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-semibold px-6 py-3 rounded-xl hover:border-brand-400 hover:text-brand-500 transition-all duration-300; }
+  .section-title { @apply text-3xl md:text-4xl font-bold text-slate-900 dark:text-white; }
+  .gradient-text { @apply bg-gradient-to-r from-brand-400 to-accent-400 bg-clip-text text-transparent; }
+  .badge { @apply inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold; }
+  .nav-link { @apply text-slate-600 dark:text-slate-400 hover:text-brand-500 dark:hover:text-brand-400 font-medium transition-colors duration-200; }
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { @apply bg-slate-100 dark:bg-slate-900; }
+::-webkit-scrollbar-thumb { @apply bg-slate-300 dark:bg-slate-700 rounded-full; }
+
+.hero-mesh {
+  background: radial-gradient(ellipse 80% 80% at 50% -20%, rgba(14,143,233,0.15) 0%, transparent 60%),
+              radial-gradient(ellipse 60% 60% at 80% 50%, rgba(139,92,246,0.1) 0%, transparent 50%);
+}
+.dark .hero-mesh {
+  background: radial-gradient(ellipse 80% 80% at 50% -20%, rgba(14,143,233,0.25) 0%, transparent 60%),
+              radial-gradient(ellipse 60% 60% at 80% 50%, rgba(139,92,246,0.15) 0%, transparent 50%);
+}
+.dot-pattern {
+  background-image: radial-gradient(circle, rgba(99,102,241,0.15) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+.dark .dot-pattern {
+  background-image: radial-gradient(circle, rgba(99,102,241,0.2) 1px, transparent 1px);
+}
+.reading-progress {
+  position: fixed; top: 0; left: 0; height: 3px;
+  background: linear-gradient(to right, #0e8fe9, #8b5cf6);
+  z-index: 9999; transition: width 0.1s ease;
+}
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.skeleton {
+  background: linear-gradient(90deg, rgba(148,163,184,0.1) 25%, rgba(148,163,184,0.2) 50%, rgba(148,163,184,0.1) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+.page-enter { animation: pageIn 0.35s ease forwards; }
+@keyframes pageIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
